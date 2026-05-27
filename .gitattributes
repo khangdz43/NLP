@@ -1,0 +1,21 @@
+# ----------------------------------------------------
+# 1. Cấu hình tự động sửa lỗi xuống dòng (LF vs CRLF)
+# ----------------------------------------------------
+* text=auto
+*.py text eol=lf
+*.ipynb text eol=lf
+
+# ----------------------------------------------------
+# 2. Cấu hình Git LFS cho các thư mục chứa file nặng
+# ----------------------------------------------------
+
+# Thư mục dữ liệu (Thường chứa file txt, csv, tsv nặng)
+/BILSTM/data/** filter=lfs diff=lfs merge=lfs -text
+/CRF/data/** filter=lfs diff=lfs merge=lfs -text
+
+# Thư mục mô hình (Chứa file trọng số .pt, .pth, .pkl)
+/BILSTM/models/** filter=lfs diff=lfs merge=lfs -text
+/CRF/models/** filter=lfs diff=lfs merge=lfs -text
+
+# Thư mục Embeddings (Chứa file wiki.vi.vec hoặc các file bin khác)
+/CRF/embeddings/** filter=lfs diff=lfs merge=lfs -text

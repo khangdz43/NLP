@@ -1,0 +1,10 @@
+pandas
+scikit-learn
+scikit-learn-crfsuite
+underthesea
+joblib
+datasets
+numpy
+torch
+tqdm
+
